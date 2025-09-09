@@ -1,0 +1,244 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #dcd7c9;
+    color: #203639;
+}
+
+/* Helper classes for SVG sizing */
+.w-5 { width: 1 rem; }
+.h-5 { height: 1.25rem; }
+.w-6 { width: 1.5rem; }
+.h-6 { height: 1.5rem; }
+
+.hero-section {
+    background-image: url('https://s.alicdn.com/@sc04/kf/H45960f0a064d471ca4a2f82014390446D/147-Shiny-Anti-Blue-Light-Glasses-Computer-Metal-Girls-Designer-Optical-Wholesale-Eyewear-Frame-Spectacle-Eyeglasses-Frame.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Custom styling for the carousel */
+
+.best-sellers-carousel {
+    max-width: 200px;
+    margin: 303px;
+}
+
+.carousel-item img {
+    height: 500px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    border: 4px solid transparent;
+    transition: all 0.2s;
+}
+
+.carousel-item:hover img {
+    border-color: #203639;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Horizontal timeline styling */
+.timeline-container {
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #dcd7c9;
+    transform: translateY(-50%);
+}
+
+.timeline-item {
+    display: inline-block;
+    width: 250px;
+    position: relative;
+    text-align: center;
+    padding: 0 1rem;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #dcd7c9;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item:hover::after {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.timeline-year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #dcd7c9;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-description {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Mission & Vision section styling */
+.mv-card {
+    background-color: #203639;
+    color: #dcd7c9;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.mv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mv-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    color: #dcd7c9;
+}
+
+/* Video container styling */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://mirrar.in/wp-content/uploads/2024/06/Try-On.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 10;
+    border-radius: 1.5rem;
+}
+
+.video-container:hover .image-overlay {
+    opacity: 0;
+}
+
+/* Custom background color class */
+.bg-inkwell {
+    background-color: #203639;
+}
+
+/* Styling for the custom image carousel in About section */
+.about-carousel-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*.about-carousel-img {
+    position: relative ;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 300%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    } */
+
+    .about-carousel-img-container {
+    position: relative;
+    /* Set your desired size here */
+    width: 700px; 
+    height: 300px; 
+    overflow: hidden;
+    border-radius: 1.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-carousel-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Keep width and height at 100% to fill the new container */
+    width: 300%; 
+    height: 100%;
+    /* Use 'contain' to ensure the whole image is visible without cropping */
+    object-fit: contain; 
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.about-carousel-img.active {
+    opacity: 1;
+}
+
+.search-panel {
+    min-width: 150px;
+}
+
+/* Custom rounded corners */
+.rounded-3xl {
+    border-radius: 1.5rem;
+}
+
+.rounded-top-3xl {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
